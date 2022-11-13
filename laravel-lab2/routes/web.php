@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Resume
+Route::get('/resume', [IndexController::class, 'Index']);
+Route::get('/resume/all', [IndexController::class, 'Show']);
+Route::get('/resume/filtered', [IndexController::class, 'Show']);
+Route::get('/resume/{id}', [IndexController::Class, 'ShowById']);
+
+
+//Route::get('/my_page', [MyPlaceController::class, 'index']);
+//
+//Route::get('lab1', [SightController::class, 'writeSights']);
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});

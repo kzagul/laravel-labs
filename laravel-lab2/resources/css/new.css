@@ -1,0 +1,16 @@
+.data{
+    display: flex;
+}
+
+.data_block{
+    display: flex;
+    background-color: black;
+}
+
+.data_item{
+
+}
+
+.data_item__bold{
+
+}
