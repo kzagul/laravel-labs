@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\VacancyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,16 +16,26 @@ use App\Http\Controllers\IndexController;
 */
 
 //Resume
+Route::get('/', function () { return redirect('/resume/all'); });
 Route::get('/resume', [IndexController::class, 'Index']);
 Route::get('/resume/all', [IndexController::class, 'Show']);
 Route::get('/resume/filtered', [IndexController::class, 'Show']);
 Route::get('/resume/{id}', [IndexController::Class, 'ShowById']);
 
 
-//Route::get('/my_page', [MyPlaceController::class, 'index']);
-//
-//Route::get('lab1', [SightController::class, 'writeSights']);
+//Vacancy
+Route::get('/vacancies', function () { return redirect('/vacancy/all'); });
+Route::get('/vacancy',function () { return redirect('/vacancy/all'); });
+Route::get('/vacancy/all', [VacancyController::class, 'Show']);
+Route::get('/vacancy/{id}', [VacancyController::Class, 'ShowById']);
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+//Staff
+Route::get('/staff', function () { return redirect('/staff/all'); });
+Route::get('/staff/all', [StaffController::class, 'Show']);
+Route::get('/staff/{staffname}', [StaffController::class, 'ShowResumesByStaffName']);
+
+//Queries
+Route::get('/query/peoplestage/', [IndexController::class, 'query1']);
+Route::get('/query/programmers/', [IndexController::class, 'query2']);
+Route::get('/query/count/', [IndexController::class, 'query3']);
+Route::get('/query/resumestaff/', [IndexController::class, 'query4']);
