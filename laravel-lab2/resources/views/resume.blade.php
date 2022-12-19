@@ -5,51 +5,26 @@
 @section('content')
     <div class="leftcol">
         <h1> {{$title}}</h1>
-        <div>
+        <button class="btn btn-add" >
+            <a href="/res/add"> Добавить резюме </a>
+        </button>
+        <div class="card-resume-grid">
             @foreach ($data as $item)
-                <div>
-{{--                    <div class="pinline1">--}}
-{{--                        <img class="pic" src="{{ asset('images/' . $data['image'])}}">--}}
-{{--                    </div>--}}
-                    <p class="pinline second">
-                        {{ $item['FIO'] }}
-                        <br>
-                        Телефон: {{ $item['phone'] }}
-                    </p>
+                <div class="card-resume">
+                    <div>
+                        <div class="pinline second card-resume-list">
+                            <div>{{ $item['FIO'] }}</div>
+                            <div>Телефон: {{ $item['phone'] }}</div>
+                            <div> Стаж: {{$item['stage']}}</div>
+                        </div>
+                    </div>
                     <p class="pinline third">
-                        Стаж: {{$item['stage']}}
-                        <button>
+                        <button class="btn btn-add">
                             <a href="/resume/{{$item['id']}}">Посмотреть</a>
                         </button>
                     </p>
                 </div>
             @endforeach
         </div>
-{{--        <p class="pinline second">--}}
-{{--            Иванов Иван<br>--}}
-{{--            Телефон: 111111--}}
-{{--        </p>--}}
-{{--        <p class="pinline third">--}}
-{{--            Стаж:--}}
-{{--            10 лет--}}
-{{--        </p>--}}
-{{--        <p class="pinline second">--}}
-{{--            Петров Петр--}}
-{{--            <br>--}}
-{{--            Телефон: 2222222--}}
-{{--        </p>--}}
-{{--        <p class="pinline third">--}}
-{{--            Стаж:--}}
-{{--            7 лет--}}
-{{--        </p>--}}
-{{--        <p class="pinline second">--}}
-{{--            Калугин Алексей--}}
-{{--            <br>--}}
-{{--            Телефон: 333333--}}
-{{--        </p>--}}
-{{--        <p class="pinline third">--}}
-{{--            Стаж:--}}
-{{--            9 лет--}}
-{{--        </p>--}}
     </div>
 @endsection

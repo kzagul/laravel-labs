@@ -15,8 +15,58 @@ table {
     width:200px;
     border-collapse:collapse;
 }
+.card-resume{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+    height: 250px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px gray;
+}
+.card-resume-list{
+    display:flex;
+    flex-direction: column;
+    gap: 20px 12px;
+}
+.card-resume-grid{
+    display:flex;
+    flex-wrap: wrap;
+}
 .h3-m {
     padding-right: 200px;
+}
+a {
+    text-decoration: none;
+}
+.form-inputs{
+    border: 1px solid black;
+    width: 200px;
+    padding: 20px;
+    background-color: hsl(100,50%,50%);
+    /*color: white;*/
+    border: 1px solid white;
+}
+.form-div{
+    /*border: 1px solid white;*/
+    /*width: 200px;*/
+    /*height: 30px;*/
+    /*background-color: hsl(100,50%,50%);*/
+    /*color: white;*/
+}
+.btn{
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+}
+.btn-add {
+    background-color: hsl(100,50%,50%);
+}
+.btn-delete {
+    background-color: hsla(350, 98%, 37%, 0.72);
+}
+.btn-change {
+    background-color: hsl(185, 80%, 43%);
 }
 td {
     border:2px solid black;

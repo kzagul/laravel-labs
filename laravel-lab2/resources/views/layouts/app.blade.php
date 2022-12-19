@@ -30,14 +30,6 @@
         </ul>
     </div>
 
-{{--    <div class="rightcol"><!--*******************Навигационное меню*******************-->--}}
-{{--        <ul class="menu">--}}
-{{--            <li><a href="/resumeL">Вакансии</a></li>--}}
-{{--            <li><a href="/resumeL/show">Резюме по профессиям</a></li>--}}
-{{--            <li><a href="/resumeL/show">Резюме по возрасту</a></li>--}}
-{{--            <li><a href="/resumeL/show">Избранное резюме</a></li>--}}
-{{--        </ul>--}}
-{{--    </div>--}}
 
     <div class="footer">&copy; Copyright 2017</div>
 </div>

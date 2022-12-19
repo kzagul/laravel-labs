@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\VacancyController;
+use App\Http\Controllers\ResumeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,20 @@ use App\Http\Controllers\VacancyController;
 */
 
 //Resume
-Route::get('/', function () { return redirect('/resume/all'); });
-Route::get('/resume', [IndexController::class, 'Index']);
+//Route::get('/', function () { return redirect('/resume/all'); });
+//Route::get('/resume', [IndexController::class, 'Index']);
 Route::get('/resume/all', [IndexController::class, 'Show']);
 Route::get('/resume/filtered', [IndexController::class, 'Show']);
 Route::get('/resume/{id}', [IndexController::Class, 'ShowById']);
 
+
+Route::get('/res/add', [ResumeController::class, 'AddResumeForm']);
+Route::post('/res/add', [ResumeController::class, 'AddResume']);
+
+Route::get('/resume/update/{id}', [ResumeController::class, 'UpdateResumeForm'])->name('UpdateResumeForm');
+Route::put('/resume/{person}', [ResumeController::class, 'UpdateResume'])->name('UpdateResume');
+
+Route::delete('/resume/{person}', [ResumeController::class, 'DeleteResume'])->name('DeleteResume');
 
 //Vacancy
 Route::get('/vacancies', function () { return redirect('/vacancy/all'); });
